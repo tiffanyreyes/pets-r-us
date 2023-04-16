@@ -108,6 +108,7 @@ h2 {
 .second-container,
 .third-container,
 .fourth-container,
+.fifth-container,
 footer {
     text-align: center;
 }
@@ -180,6 +181,18 @@ input[type="submit"] {
     font-size: 1.2rem;
 }
 
+.trainer-card {
+    text-align: center;
+}
+
+#trainer-profile {
+    width: 175px;
+    height: auto;
+}
+
 footer {
-    margin-bottom: 3rem;
+    background-color: #A65B2B;
+    color: white;
+    margin-top: 3rem;
+    padding: 2em;
 }

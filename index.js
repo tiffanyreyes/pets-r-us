@@ -22,6 +22,18 @@ app.get('/grooming', (req, res) => {
     res.render('grooming', {
         title: 'Pets-R-Us',
     })
-})
+});
 
-app.listen(PORT, () => {})
+app.get('/boarding', (req, res) => {
+    res.render('boarding', {
+        title: 'Pets-R-Us',
+    })
+});
+
+app.get('/training', (req, res) => {
+    res.render('training', {
+        title: 'Pets-R-Us',
+    })
+});
+
+app.listen(PORT, () => {});
