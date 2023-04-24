@@ -190,6 +190,25 @@ input[type="submit"] {
     height: auto;
 }
 
+.form-field {
+    text-align: center;
+    font-size: 24px;
+    padding: 2em;
+}
+
+.btn-primary {
+    color: white;
+    background-color: #F27D33;
+    border: unset;
+    padding: 1rem;
+    border-radius: 4px;
+}
+
+.btn-primary:hover {
+    background-color: #F2B749;
+    cursor: pointer;
+}
+
 footer {
     background-color: #A65B2B;
     color: white;
