@@ -54,6 +54,12 @@ app.get('/register', (req, res) => {
     })
 });
 
+app.get('/customer-list', (req, res) => {
+    res.render('register', {
+        title: 'Pets-R-Us',
+    })
+});
+
 app.post('/customers', (req, res, next) => {
     const newCustomer = new Customer({
         customerId: req.body.customerId, 
@@ -66,6 +72,19 @@ app.post('/customers', (req, res, next) => {
         .then((result) => {
             res.render('index', {
                 title: 'Pets-R-Us'
+            })
+        })
+        .catch((err) => {
+            next(err);
+        });
+});
+
+app.get('/customers', (req, res) => {
+    Customer.find({})
+        .then((customers) => {
+            res.render('customer-list', {
+                title: 'Pets-R-Us',
+                customers: customers
             })
         })
         .catch((err) => {

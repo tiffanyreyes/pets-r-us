@@ -209,6 +209,34 @@ input[type="submit"] {
     cursor: pointer;
 }
 
+.customer-table {
+    text-align: left;
+    border-collapse: collapse;
+    margin: 0 auto;
+    color: #A65B2B;
+    width: 33%;
+}
+
+.customer-table thead {
+    background-color: #F27D33;
+    color: white;
+    font-size: 22px;
+}
+
+.customer-table a {
+    color: #A65B2B;
+    text-decoration: none;
+}
+
+.customer-table a:visited {
+    color: #A65B2B;
+}
+
+.customer-table a:hover {
+    color: #F2B749;
+    text-decoration: none;
+}
+
 footer {
     background-color: #A65B2B;
     color: white;
