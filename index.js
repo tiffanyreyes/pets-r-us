@@ -1,8 +1,10 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const path = require('path');
+const fs = require('fs');
 
-const Customer = require('./models/customer')
+const Customer = require('./models/customer');
+const Appointment = require('./models/appointment');
 const app = express(); 
 
 
@@ -91,5 +93,37 @@ app.get('/customers', (req, res) => {
             next(err);
         });
 });
+
+app.get('/appointment', (req, res) => {
+    let jsonFile = fs.readFileSync('./public/data/services.json');
+    let services = JSON.parse(jsonFile);
+
+    console.log(services);
+
+    res.render('booking', {
+        title: 'Pets-R-Us',
+        services: services
+    })
+})
+
+app.post('/appointment', (req, res, next) => {
+    const newAppointment = new Appointment({
+        userName: req.body.userName,
+        firstName: req.body.firstName,
+        lastName: req.body.lastName,
+        email: req.body.email,
+        service: req.body.service
+    })
+
+    Appointment.create(newAppointment)
+        .then((result) => {
+            res.render('index', {
+                title: 'Pets-R-Us'
+            })
+        })
+        .catch((err) => {
+            next(err);
+        });
+})
 
 app.listen(PORT, () => {});

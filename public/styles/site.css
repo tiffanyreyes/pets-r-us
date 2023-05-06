@@ -237,6 +237,18 @@ input[type="submit"] {
     text-decoration: none;
 }
 
+.inline-help {
+    font-size: small;
+    color: #A65B2B;
+    padding-left: 5em;
+}
+
+.service-box {
+    width: 15%;
+    height: auto;
+}
+
+
 footer {
     background-color: #A65B2B;
     color: white;
