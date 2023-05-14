@@ -126,4 +126,20 @@ app.post('/appointment', (req, res, next) => {
         });
 })
 
+app.get('/my-appointments', (req, res) => {
+    res.render('my-appointments', {
+        title: 'Pets-R-Us'
+    })
+})
+
+app.get('/api/appointments/:email', async(req, res, next) => {
+    Appointment.find({email: req.params.email})
+        .then((appointments) => {
+           res.json(appointments);
+        })
+        .catch((err) => {
+            next(err);
+        });
+})
+
 app.listen(PORT, () => {});

@@ -248,6 +248,19 @@ input[type="submit"] {
     height: auto;
 }
 
+.appointment-table {
+    text-align: left;
+    border-collapse: collapse;
+    margin: 0 auto;
+    color: #A65B2B;
+    width: 50%;
+}
+
+.appointment-table thead {
+    background-color: #F27D33;
+    color: white;
+    font-size: 22px;
+}
 
 footer {
     background-color: #A65B2B;
